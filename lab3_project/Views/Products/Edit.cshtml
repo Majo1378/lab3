@@ -1,0 +1,9 @@
+@model Product
+<h2>Editar</h2>
+<form method="post">
+    <input type="hidden" asp-for="Id" />
+    <label>Nombre: @Model.Nombre</label><br/>
+    <label>Precio:</label><input asp-for="Precio" /><br/>
+    <label>Stock:</label><input asp-for="Stock" /><br/>
+    <button type="submit">Guardar</button>
+</form>

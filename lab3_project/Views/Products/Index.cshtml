@@ -1,0 +1,17 @@
+@model IEnumerable<Product>
+<h1>Productos</h1>
+<form method="get">
+    <input type="text" name="search" placeholder="Buscar..." />
+    <button type="submit">Buscar</button>
+</form>
+<table>
+<tr><th>Nombre</th><th>Precio</th><th>Stock</th><th>Acciones</th></tr>
+@foreach(var p in Model) {
+<tr>
+<td>@p.Nombre</td>
+<td>@p.Precio</td>
+<td>@p.Stock</td>
+<td><a href="/Products/Edit/@p.Id">Editar</a> | <a href="/Products/Delete/@p.Id">Eliminar</a></td>
+</tr>
+}
+</table>

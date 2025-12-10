@@ -1,0 +1,16 @@
+@model EstadisticasVM
+<h2>Estadísticas</h2>
+<h3>Reporte de Precios (Mayor a menor)</h3>
+<ul>
+@foreach(var p in Model.ProductosOrdenados) {
+    <li>@p.Nombre - ₡@p.Precio</li>
+}
+</ul>
+<h3>Promedio de Precios: ₡@Model.PromedioPrecio</h3>
+<h3>Valor Total Inventario: ₡@Model.ValorInventario</h3>
+<h3>Stock Crítico (&lt;5)</h3>
+<ul>
+@foreach(var p in Model.StockCritico) {
+    <li>@p.Nombre - Stock: @p.Stock</li>
+}
+</ul>

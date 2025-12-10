@@ -1,0 +1,1 @@
+<mxfile><diagram name="busqueda">Start -> Input search -> If empty -> Show all products -> Else -> Filter products by name -> Display results -> End</diagram></mxfile>
